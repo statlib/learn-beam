@@ -65,7 +65,8 @@ iex
 
 ## Books
 * [The BEAM Book](https://blog.stenmans.org/theBeamBook/)
-
+* [Concurrent Programming in Erlang](https://erlang.org/download/erlang-book-part1.pdf)
+  
 ## Courses
 * [Chalmers - Parallel FP (2018)](https://www.cse.chalmers.se/edu/course.2018/DAT280_Parallel_Functional_Programming/lectures.html)
 * [Chalmers - Parallel FP (2015)](https://www.cse.chalmers.se/edu/year/2015/course/DAT280_Parallel_Functional_Programming/)
@@ -74,6 +75,7 @@ iex
 * [Chalmers - Principles of Concurrent Programming (2021/22)](https://www.cse.chalmers.se/edu/course.2021/TDA384_LP1/)
 * [Glasgow - Erlang tutorial](https://www.dcs.gla.ac.uk/~amirg/tutorial/erlang/)
 * [KTH - Distributed Systems in Erlang](https://people.kth.se/~johanmon/dse.html)
+* [Learn you some Erlang for good](https://learnyousomeerlang.com/content)
 
 ## Talks
 * [Learning Erlang Socially Over the Internet](https://www.cs.kent.ac.uk/people/staff/sjt/TFPIE2017/TFPIE_2017/Slides/Adams.pdf)
