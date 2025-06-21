@@ -82,6 +82,7 @@ iex
 * [Exercism - Erlang](https://exercism.org/tracks/erlang)
 * [Exercism - Elixir](https://exercism.org/tracks/elixir)
 * [Glasgow - Erlang tutorial](https://www.dcs.gla.ac.uk/~amirg/tutorial/erlang/)
+* [Kent - Erlang Master Class](https://www.youtube.com/playlist?list=PLoJC20gNfC2hnIUbQtA79kHxL8-iw_I2w)
 * [KTH - Distributed Systems in Erlang](https://people.kth.se/~johanmon/dse.html)
 * [Learn you some Erlang for good](https://learnyousomeerlang.com/content)
 * [The Pragmatic Studio - Elixir & OTP](https://pragmaticstudio.com/courses/elixir)
