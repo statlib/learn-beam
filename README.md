@@ -63,19 +63,28 @@ iex
 
 # Resources
 
+## Official
+* [Getting started](https://www.erlang.org/faq/getting_started)
+* [Universities](https://www.erlang.org/faq/introduction#universities)
+
 ## Books
 * [The BEAM Book](https://blog.stenmans.org/theBeamBook/)
 * [Concurrent Programming in Erlang](https://erlang.org/download/erlang-book-part1.pdf)
   
 ## Courses
+* [An Erlang Course](https://erlang.org/course/course.html)
+* [BEAM Wisdoms](https://beam-wisdoms.clau.se/start.html)
 * [Chalmers - Parallel FP (2018)](https://www.cse.chalmers.se/edu/course.2018/DAT280_Parallel_Functional_Programming/lectures.html)
 * [Chalmers - Parallel FP (2015)](https://www.cse.chalmers.se/edu/year/2015/course/DAT280_Parallel_Functional_Programming/)
 * [Chalmers - Parallel FP exam (2020)](https://www.chalmerstenta.nu/tenta/DAT280__-__Parallell__funktionell__programmering/20200820i.pdf)
 * [Chalmers - Principles of Concurrent Programming (2024)](https://www.cse.chalmers.se/edu/year/2024/course/TDA384_LP1/)
 * [Chalmers - Principles of Concurrent Programming (2021/22)](https://www.cse.chalmers.se/edu/course.2021/TDA384_LP1/)
+* [Exercism - Erlang](https://exercism.org/tracks/erlang)
+* [Exercism - Elixir](https://exercism.org/tracks/elixir)
 * [Glasgow - Erlang tutorial](https://www.dcs.gla.ac.uk/~amirg/tutorial/erlang/)
 * [KTH - Distributed Systems in Erlang](https://people.kth.se/~johanmon/dse.html)
 * [Learn you some Erlang for good](https://learnyousomeerlang.com/content)
+* [The Pragmatic Studio - Elixir & OTP](https://pragmaticstudio.com/courses/elixir)
 
 ## Talks
 * [Learning Erlang Socially Over the Internet](https://www.cs.kent.ac.uk/people/staff/sjt/TFPIE2017/TFPIE_2017/Slides/Adams.pdf)
