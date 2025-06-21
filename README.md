@@ -49,6 +49,17 @@ iex
 #Interactive Elixir (1.18.4) - press Ctrl+C to exit (type h() ENTER for help)
 ```
 
+# Key figures
+
+## Erlang
+* Joe Armstrong
+* Francesco Cesarini
+* Erik Stenman
+* Mike Williams
+* Robert Virding
+
+## Elixir
+* Jose Valim
 
 # Resources
 
@@ -59,7 +70,7 @@ iex
 * [Chalmers - Parallel FP (2018)](https://www.cse.chalmers.se/edu/course.2018/DAT280_Parallel_Functional_Programming/lectures.html)
 * [Chalmers - Parallel FP (2015)](https://www.cse.chalmers.se/edu/year/2015/course/DAT280_Parallel_Functional_Programming/)
 * [Chalmers - Parallel FP exam (2020)](https://www.chalmerstenta.nu/tenta/DAT280__-__Parallell__funktionell__programmering/20200820i.pdf)
-* [Chalmers - Principles of Concurrent Programming (2021/22)]([Principles of Concurrent Programming](https://www.cse.chalmers.se/edu/course.2021/TDA384_LP1/files/lectures/))
+* [Chalmers - Principles of Concurrent Programming (2021/22)](https://www.cse.chalmers.se/edu/course.2021/TDA384_LP1/files/lectures/))
 * [Glasgow - Erlang tutorial](https://www.dcs.gla.ac.uk/~amirg/tutorial/erlang/)
 
 ## Talks
