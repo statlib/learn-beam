@@ -52,8 +52,7 @@ iex
 ```
 
 ## Livebook setup in WSL
-```
-
+```bash
 sudo apt install erlang-inets erlang-os-mon erlang-runtime-tools erlang-ssl erlang-xmerl erlang-dev erlang-parsetools
 mkdir -p ~/git
 cd ~/git
