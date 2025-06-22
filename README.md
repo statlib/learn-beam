@@ -2,7 +2,9 @@
 Learning material for Erlang, Elixir and the BEAM ecosystem
 
 
-# Installation guide (Kali)
+# Installation guide (WSL)
+
+## Erlang and Elixir
 ```bash
 # Download asdf v0.18.0 and place in ~/.local/bin
 mkdir -p ~/opt
@@ -39,7 +41,7 @@ cd ~/opt
 wget https://github.com/elixir-lang/elixir/releases/download/v1.18.4/elixir-otp-27.zip
 unzip elixir-otp-27.zip
 
-# Add to ~/.bashrc
+# Add to ~/.bash_profile
 # Elixir
 export ELIXIR_HOME=/home/user/opt/elixir-otp-27
 export PATH=$ELIXIR_HOME/bin:$PATH
@@ -47,6 +49,74 @@ iex
 #Erlang/OTP 27 [erts-15.2.6] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [jit:ns]
 #
 #Interactive Elixir (1.18.4) - press Ctrl+C to exit (type h() ENTER for help)
+```
+
+## Livebook setup in WSL
+```
+
+sudo apt install erlang-inets erlang-os-mon erlang-runtime-tools erlang-ssl erlang-xmerl erlang-dev erlang-parsetools
+mkdir -p ~/git
+cd ~/git
+git clone https://github.com/livebook-dev/livebook.git
+cd livebook/
+mix deps.get --only prod
+
+# Add to ~/.bashrc
+livebook() {
+    # --- CONFIGURATION ---
+    # On WSL, set the full path to your desired Windows browser executable
+    local wsl_browser_path="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+    # -------------------
+
+    # Change to the correct directory
+    cd ~/git/livebook/ || return
+
+    # A flag to ensure we only open the URL once
+    local opened=false
+
+    # This function processes each line of output from the server
+    open_when_ready() {
+        while IFS= read -r line; do
+            # Echo the line to the terminal so you see the server's output
+            echo "$line"
+
+            # Check if we haven't opened the browser yet and if the line contains a URL
+            if ! $opened && [[ "$line" =~ (http://[^[:space:]]+) ]]; then
+                # The regex above found a URL and bash stores it in BASH_REMATCH
+                local url="${BASH_REMATCH[1]}"
+                echo -e "\n[Helper] Found URL. Opening in browser...\n"
+                echo $url
+
+                # Use the correct command to open the URL based on the OS
+                case "$(uname -s)" in
+                    Linux*)
+                        # Check if we are in Windows Subsystem for Linux
+                        if grep -q -i "microsoft" /proc/version; then
+                            # Use the specified browser path for WSL
+                            # The final '&' runs the command in the background
+                            "$wsl_browser_path" "$url" &>/dev/null &
+                        else
+                            # Standard Linux behavior
+                            xdg-open "$url" &>/dev/null
+                        fi
+                        ;;
+                    Darwin*) # macOS
+                        open "$url"
+                        ;;
+                esac
+                
+                # Set the flag to true to prevent opening more tabs
+                opened=true
+            fi
+        done
+    }
+
+    # Start the server, redirecting all its output (stdout and stderr)
+    # into our 'open_when_ready' function to be processed.
+    MIX_ENV=prod mix phx.server 2>&1 | open_when_ready
+}
+
+livebook
 ```
 
 # Key figures
