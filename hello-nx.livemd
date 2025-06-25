@@ -1,0 +1,50 @@
+<!-- livebook:{"persist_outputs":true} -->
+
+# Nx
+
+```elixir
+Mix.install([
+  {:nx, "~> 0.9"},
+  {:kino_explorer, "~> 0.1.20"},
+  {:kino_vega_lite, "~> 0.1.11"}
+])
+```
+
+## Untitled
+
+```elixir
+Nx.tensor(
+  [
+    [1, 2, 3], 
+    [4, 5, 6]
+  ], 
+  names: [:x, :y]
+)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+#Nx.Tensor<
+  s32[x: 2][y: 3]
+  [
+    [1, 2, 3],
+    [4, 5, 6]
+  ]
+>
+```
+
+```elixir
+a = Nx.tensor([1, 2, 3])
+b = Nx.tensor([0, 1, 2])
+Nx.add(a, b)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+#Nx.Tensor<
+  s32[3]
+  [1, 3, 5]
+>
+```

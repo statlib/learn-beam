@@ -51,7 +51,7 @@ iex
 #Interactive Elixir (1.18.4) - press Ctrl+C to exit (type h() ENTER for help)
 ```
 
-## Livebook setup in WSL
+## Livebook setup
 ```bash
 sudo apt install erlang-inets erlang-os-mon erlang-runtime-tools erlang-ssl erlang-xmerl erlang-dev erlang-parsetools
 mkdir -p ~/git
@@ -118,6 +118,24 @@ livebook() {
 livebook
 ```
 
+## Compiling the Beam book
+
+```
+sudo apt update
+
+sudo apt install git build-essential rsync wget curl make \
+                 ruby ruby-dev default-jre \
+                 asciidoctor graphviz
+sudo gem install asciidoctor-pdf asciidoctor-diagram rouge bundler
+bundle install
+
+mkdir -p ~/git
+cd ~/git
+git clone https://github.com/happi/theBeamBook.git
+cd theBeamBook
+asciidoctor-epub3 epub-book.asciidoc
+```
+
 # Key figures
 
 ## Erlang
@@ -139,7 +157,8 @@ livebook
 ## Books
 * [The BEAM Book](https://blog.stenmans.org/theBeamBook/)
 * [Concurrent Programming in Erlang](https://erlang.org/download/erlang-book-part1.pdf)
-  
+* [Elixir in Action](https://livebook.manning.com/book/elixir-in-action-third-edition/part-1/)
+
 ## Courses
 * [An Erlang Course](https://erlang.org/course/course.html)
 * [BEAM Wisdoms](https://beam-wisdoms.clau.se/start.html)
